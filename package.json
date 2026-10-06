@@ -1,5 +1,5 @@
 {
-  "name": "mag-maps-page",
+  "name": "gis-gis-mag-maps-page",
   "version": "6.7.0",
   "date": "2026-09-02",
   "created": "2014-10-21",
@@ -20,10 +20,10 @@
   "author": "Maricopa Association of Governments (MAG) (https://www.azmag.gov/)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AZMAG/mag-maps-page.git"
+    "url": "git+https://github.com/AZMAG/gis-mag-maps-page.git"
   },
   "bugs": {
-    "url": "https://github.com/AZMAG/mag-maps-page/issues"
+    "url": "https://github.com/AZMAG/gis-mag-maps-page/issues"
   },
   "private": true,
   "engines": {

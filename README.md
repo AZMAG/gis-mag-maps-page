@@ -1,11 +1,11 @@
-# mag-maps-page
+# gis-mag-maps-page
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmaps.azmag.gov%2F&label=website&style=flat-square)](https://maps.azmag.gov/)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/AZMAG/mag-maps-page?&logo=github&style=flat-square)](https://github.com/AZMAG/mag-maps-page/releases)
-![GitHub Release Date](https://img.shields.io/github/release-date/AZMAG/mag-maps-page?&logo=github&style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/AZMAG/mag-maps-page?&logo=github&style=flat-square)
-[![GitHub issues](https://img.shields.io/github/issues/AZMAG/mag-maps-page?&logo=github&style=flat-square)](https://github.com/AZMAG/mag-maps-page/issues)
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/AZMAG/mag-maps-page?style=flat-square)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/AZMAG/gis-mag-maps-page?&logo=github&style=flat-square)](https://github.com/AZMAG/gis-mag-maps-page/releases)
+![GitHub Release Date](https://img.shields.io/github/release-date/AZMAG/gis-mag-maps-page?&logo=github&style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/AZMAG/gis-mag-maps-page?&logo=github&style=flat-square)
+[![GitHub issues](https://img.shields.io/github/issues/AZMAG/gis-mag-maps-page?&logo=github&style=flat-square)](https://github.com/AZMAG/gis-mag-maps-page/issues)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/AZMAG/gis-mag-maps-page?style=flat-square)
 [![semver](https://img.shields.io/badge/semver-2.0.0-blue?style=flat-square)](https://semver.org/)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -54,8 +54,8 @@ npm --version
 
 ### :gear: Quickstart Instructions
 
-1. [Clone this repo](https://github.com/AZMAG/mag-maps-page) - `https://github.com/AZMAG/mag-maps-page`
-2. `cd` into the `mag-maps-page` folder.
+1. [Clone this repo](https://github.com/AZMAG/gis-mag-maps-page) - `https://github.com/AZMAG/gis-mag-maps-page`
+2. `cd` into the `gis-mag-maps-page` folder.
 3. Install the dependencies with `npm install`.
 4. Copy `.env.example` to `.env` and fill in the values (see below).
 5. Start the dev server with `npm run dev`.
@@ -179,4 +179,4 @@ This project is licensed under the MIT license.
 
 - [LICENSE](LICENSE)
 
-[Back to top](#mag-maps-page)
+[Back to top](#gis-mag-maps-page)
