@@ -68,7 +68,7 @@
     "prettier-plugin-tailwindcss": "^0.8.1",
     "replace-in-file": "^9.0.0",
     "tailwindcss": "^4.3.3",
-    "vite": "^8.2.2"
+    "vite": "^8.3.4"
   },
   "prettier": {
     "extends": "mag-prettier-config",
