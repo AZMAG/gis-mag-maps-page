@@ -1,7 +1,7 @@
 {
   "name": "gis-gis-mag-maps-page",
-  "version": "6.7.0",
-  "date": "2026-09-02",
+  "version": "6.7.1",
+  "date": "2026-10-30",
   "created": "2014-10-21",
   "copyright": "2026",
   "description": "MAG Main Map Page",
@@ -35,7 +35,7 @@
     "build": "npm run replace && vite build --mode production && explorer dist",
     "build:test": "npm run replace && vite build --mode test && explorer dist",
     "preview": "vite preview",
-    "replace": "node replaceScripts",
+    "replace": "node ./scripts/replace-scripts",
     "lint": "eslint .",
     "format": "prettier --write .",
     "check-casing": "node scripts/check-file-casing.js"
