@@ -4,8 +4,8 @@ import DocConfig from "../../../config/doc-config"
 export default function TermsText() {
 
   return (
-    <div className="text-slate-800">
-      <h5 className="mb-1 text-xl font-bold text-slate-800">
+    <div className="text-magBlue">
+      <h5 className="mb-1 text-xl font-bold">
         Agreement Between User and MAG Mapping Center
       </h5>
       <p className="mb-3">
@@ -15,13 +15,13 @@ export default function TermsText() {
         MAG Mapping Center Web Site constitutes your agreement to all such terms, conditions, and
         notices.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">Modification of These Terms of Use</h5>
+      <h5 className="mb-1 text-xl font-bold">Modification of These Terms of Use</h5>
       <p className="mb-3">
         MAG Mapping Center reserves the right to change the terms, conditions, and notices under
         which the MAG Mapping Center Web Site is offered, including but not limited to the charges
         associated with the use of the MAG Mapping Center Web Site.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">Links to Third Party Sites</h5>
+      <h5 className="mb-1 text-xl font-bold">Links to Third Party Sites</h5>
       <p className="mb-3">
         The MAG Mapping Center Web Site may contain links to other Web Sites ("Linked Sites"). The
         Linked Sites are not under the control of MAG Mapping Center and MAG Mapping Center is not
@@ -32,7 +32,7 @@ export default function TermsText() {
         inclusion of any link does not imply endorsement by MAG Mapping Center of the site or any
         association with its operators.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">No Unlawful or Prohibited Use</h5>
+      <h5 className="mb-1 text-xl font-bold">No Unlawful or Prohibited Use</h5>
       <p className="mb-3">
         As a condition of your use of the MAG Mapping Center Web Site, you warrant to MAG Mapping
         Center that you will not use the MAG Mapping Center Web Site for any purpose that is
@@ -43,7 +43,7 @@ export default function TermsText() {
         information through any means not intentionally made available or provided for through the
         MAG Mapping Center Web Sites.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">Use of Communication Services</h5>
+      <h5 className="mb-1 text-xl font-bold">Use of Communication Services</h5>
       <p className="mb-3">
         The MAG Mapping Center Web Site may contain bulletin board services, chat areas, news
         groups, forums, communities, personal web pages, calendars, and/or other message or
@@ -125,7 +125,7 @@ export default function TermsText() {
         reproduction and/or dissemination. You are responsible for adhering to such limitations if
         you download the materials.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">
+      <h5 className="mb-1 text-xl font-bold">
         Materials Provided to MAG Mapping Center or Posted at Any MAG Mapping Center Web Site
       </h5>
       <p className="mb-3">
@@ -150,7 +150,7 @@ export default function TermsText() {
         described in this section including, without limitation, all the rights necessary for you to
         provide, post, upload, input or submit the Submissions.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">Liability Disclaimer</h5>
+      <h5 className="mb-1 text-xl font-bold">Liability Disclaimer</h5>
       <p className="mb-3">
         THE INFORMATION, SOFTWARE, PRODUCTS, AND SERVICES INCLUDED IN OR AVAILABLE THROUGH THE MAG
         MAPPING CENTER WEB SITE MAY INCLUDE INACCURACIES OR TYPOGRAPHICAL ERRORS. CHANGES ARE
@@ -192,7 +192,7 @@ export default function TermsText() {
         SERVICE CONTACT:
         {" "}<ContactUsLink contactId="magnoreply" />
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">Termination/Access Restriction</h5>
+      <h5 className="mb-1 text-xl font-bold">Termination/Access Restriction</h5>
       <p className="mb-3">
         MAG Mapping Center reserves the right, in its sole discretion, to terminate your access to
         the MAG Mapping Center Web Site and the related services or any portion thereof at any time,
@@ -224,13 +224,13 @@ export default function TermsText() {
         in printed form. It is the express wish to the parties that this agreement and all related
         documents are drawn up in English.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">Copyright and Trademark Notices</h5>
+      <h5 className="mb-1 text-xl font-bold">Copyright and Trademark Notices</h5>
       <p className="mb-3">
         All contents of the MAG Mapping Center Web Site are: Copyright&nbsp;
         {DocConfig.copyright} by Maricopa Association of Governments and/or its suppliers. All
         rights reserved.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">Trademarks</h5>
+      <h5 className="mb-1 text-xl font-bold">Trademarks</h5>
       <p className="mb-3">
         The names of actual companies and products mentioned herein may be the trademarks of their
         respective owners.
@@ -241,7 +241,7 @@ export default function TermsText() {
         intended or should be inferred.
       </p>
       <p className="mb-3">Any rights not expressly granted herein are reserved.</p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">
+      <h5 className="mb-1 text-xl font-bold">
         Notices and Procedure for Making Claims of Copyright Infringement
       </h5>
       <p className="mb-3">

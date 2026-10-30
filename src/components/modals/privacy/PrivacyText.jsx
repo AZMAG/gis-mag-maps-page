@@ -3,14 +3,14 @@ import ContactUsLink from "../../contact-us/ContactUsLink"
 export default function PrivacyText() {
 
   return (
-    <div className="text-slate-800">
+    <div className="text-magBlue">
       <p className="mb-3">
         MAG Mapping Center is committed to protecting your privacy and developing technology that
         gives you the most powerful and safe online experience. This Statement of Privacy applies to
         the MAG Mapping Center Web site and governs data collection and usage. By using the MAG
         Mapping Center website, you consent to the data practices described in this statement.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">
+      <h5 className="mb-1 text-xl font-bold">
         Collection of your Personal Information
       </h5>
       <p className="mb-3">
@@ -39,7 +39,7 @@ export default function PrivacyText() {
         statements or other content on Web sites outside of the MAG Mapping Center and MAG Mapping
         Center family of Web sites.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">Use of your Personal Information</h5>
+      <h5 className="mb-1 text-xl font-bold">Use of your Personal Information</h5>
       <p className="mb-3">
         MAG Mapping Center collects and uses your personal information to operate the MAG Mapping
         Center Web site and deliver the services you have requested. MAG Mapping Center also uses
@@ -75,7 +75,7 @@ export default function PrivacyText() {
         and, (c) act under exigent circumstances to protect the personal safety of users of MAG
         Mapping Center, or the public.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">Use of Cookies</h5>
+      <h5 className="mb-1 text-xl font-bold">Use of Cookies</h5>
       <p className="mb-3">
         The MAG Mapping Center Web site use "cookies" to help you personalize your online
         experience. A cookie is a text file that is placed on your hard disk by a Web page
@@ -99,7 +99,7 @@ export default function PrivacyText() {
         If you choose to decline cookies, you may not be able to fully experience the interactive
         features of the MAG Mapping Center services or Web sites you visit.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">
+      <h5 className="mb-1 text-xl font-bold">
         Security of your Personal Information
       </h5>
       <p className="mb-3">
@@ -110,13 +110,13 @@ export default function PrivacyText() {
         to other Web sites, it is protected through the use of encryption, such as the Secure Socket
         Layer (SSL) protocol.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">Changes to this Statement</h5>
+      <h5 className="mb-1 text-xl font-bold">Changes to this Statement</h5>
       <p className="mb-3">
         MAG Mapping Center will occasionally update this Statement of Privacy to reflect company and
         customer feedback. MAG Mapping Center encourages you to periodically review this Statement
         to be informed of how MAG Mapping Center is protecting your information.
       </p>
-      <h5 className="mb-1 text-xl font-bold text-slate-800">Contact Information</h5>
+      <h5 className="mb-1 text-xl font-bold">Contact Information</h5>
       <p className="mb-3">
         MAG Mapping Center welcomes your comments regarding this Statement of Privacy. If you
         believe that MAG Mapping Center has not adhered to this Statement, please contact MAG

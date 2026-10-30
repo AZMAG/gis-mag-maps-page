@@ -3,7 +3,7 @@ import ContactUsLink from "../../contact-us/ContactUsLink"
 export default function LegalText() {
 
   return (
-    <div className="text-slate-800">
+    <div className="text-magBlue">
       <p className="mb-3">
         The Maricopa Association of Governments (MAG) provides the data within these pages as a
         public resource of general information for use "as is". The Maricopa Association of

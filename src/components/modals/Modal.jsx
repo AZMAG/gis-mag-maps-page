@@ -22,13 +22,13 @@ export default observer(function Modal({ name, title, icon, children }) {
                         <div className="relative mx-auto my-6 w-auto max-w-3xl">
                             <div className="relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none">
                                 {/* Modal Header */}
-                                <div className="flex items-center gap-x-2 rounded-t border-b border-solid border-cyan-900 bg-cyan-800 p-4">
-                                    <FontAwesomeIcon className="text-slate-100" size="2x" icon={icon} />
-                                    <h3 id={`${title}-modal-title`} className="text-3xl font-semibold text-slate-100">
+                                <div className="flex items-center gap-x-2 rounded-t border-b border-solid border-magBlue bg-magBlue p-4">
+                                    <FontAwesomeIcon className="text-white" size="2x" icon={icon} />
+                                    <h3 id={`${title}-modal-title`} className="text-3xl font-semibold text-white">
                                         {title}
                                     </h3>
                                     <button
-                                        className="ml-auto inline-flex items-center rounded-lg p-1.5 text-sm text-slate-400 hover:bg-slate-200 hover:text-slate-800 cursor-pointer"
+                                        className="ml-auto inline-flex items-center rounded-lg p-1.5 text-sm text-white hover:text-magGreen cursor-pointer"
                                         type="button"
                                         aria-label={`Close ${title}`}
                                         onClick={() => setShowModal(false)}>
@@ -48,9 +48,9 @@ export default observer(function Modal({ name, title, icon, children }) {
                                 <div className="relative max-h-[75vh] flex-auto overflow-y-scroll p-6">
                                     <div className="container mx-auto text-left text-sm">{children}</div>
                                 </div>
-                                <div className="flex flex-col rounded-b border-t border-solid border-slate-400 p-3">
+                                <div className="flex flex-col rounded-b border-t border-solid border-magBlue p-3">
                                     <button
-                                        className="flex cursor-pointer justify-end px-6 py-2 text-sm font-bold uppercase text-slate-800 outline-none hover:text-cyan-800 hover:underline focus:outline-none"
+                                        className="flex cursor-pointer justify-end px-6 py-2 text-sm font-bold uppercase text-magBlue outline-none hover:text-magGreen hover:underline focus:outline-none"
                                         type="button"
                                         onClick={() => setShowModal(false)}>
                                         Close
