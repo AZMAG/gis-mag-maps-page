@@ -136,6 +136,11 @@ src/
 └── stores/           # MobX store and React context
 ```
 
+Footer social link names, URLs, and ordering are configured in
+`src/config/doc-config.js`; `src/layout/footer/SocialMedia.jsx` renders their icons and links.
+`src/layout/footer/Footer.jsx` composes `ContactInfo`, `SubscribeForm`, `SocialMedia`,
+and `FooterLegal`, keeping the responsive layout separate from each section's markup.
+
 ## Deployment Instructions
 
 ### Production

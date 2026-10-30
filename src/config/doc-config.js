@@ -38,6 +38,33 @@ const docConfig = {
             title: "no-reply@azmag.gov",
         },
     ],
+    socialMedia: [
+        {
+            id: "facebook",
+            name: "Facebook",
+            link: "https://www.facebook.com/MAGRegional/",
+        },
+        {
+            id: "twitter",
+            name: "Twitter",
+            link: "https://twitter.com/magregion",
+        },
+        {
+            id: "youtube",
+            name: "Youtube",
+            link: "https://www.youtube.com/user/MAGCommunications",
+        },
+        {
+            id: "instagram",
+            name: "Instagram",
+            link: "https://www.instagram.com/mag_regional/",
+        },
+        {
+            id: "linkedin",
+            name: "Linkedin",
+            link: "https://www.linkedin.com/company/maricopa-association-of-governments/mycompany/",
+        },
+    ],
 };
 
 export const getPrimaryContact = () =>
