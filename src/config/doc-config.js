@@ -10,13 +10,15 @@ const docConfig = {
         measurementId: import.meta.env.VITE_GA_MEASUREMENT_ID,
     },
     links: {
-        magHome: "https://www.azmag.gov/",
+        magHome: "https://azmag.gov/",
         magMaps: "https://maps.azmag.gov/",
         RADigestLink:
             "https://public.govdelivery.com/accounts/AZMAG/subscriber/new?topic_id=AZMAG_292",
         RADigestArchived: "https://azmag.gov/Newsroom/RADigest",
         InfoGraphicLink:
             "https://azmag.gov/About-Us/Divisions/Regional-Analytics-Division/Infographics-Maps-and-Reports",
+        MapsAndDataLink: "https://azmag.gov/Programs/Maps-and-Data/",
+        GeoDataOpenDataLink: "https://geodata-azmag.opendata.arcgis.com/",
     },
     contacts: [
         {

@@ -18,7 +18,7 @@ export default function DesktopNavigation() {
               to={link.link}
               target={link.internal ? "_self" : "_blank"}
               rel="noreferrer"
-              className="flex rounded p-0 py-2 hover:text-cyan-800 hover:underline hover:decoration-fuchsia-900 hover:decoration-2"
+              className="flex rounded p-0 py-2 hover:underline hover:decoration-magGreen hover:decoration-2"
             >
               {link.name}
             </NavLink>
