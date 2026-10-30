@@ -1,4 +1,4 @@
-import DateInfo from "../../config/trainingDatesInfo"
+import DateInfo from "../../config/training-dates-info"
 
 export default function TrainingDates() {
   const info = DateInfo()

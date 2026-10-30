@@ -1,5 +1,5 @@
 import ContactUsLink from "../../contact-us/ContactUsLink"
-import DocConfig from "../../../config/docConfig"
+import DocConfig from "../../../config/doc-config"
 
 export default function TermsText() {
 

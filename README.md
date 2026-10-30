@@ -129,7 +129,7 @@ src/
 ├── assets/           # Images and logos
 ├── components/       # Buttons, contact-us, modals, scroll-to-top
 ├── config/           # docConfig, quotes, training dates
-├── layout/           # Header, footer, heroes, cards, sections
+├── layout/           # Header, navigation, footer, heroes, cards, sections
 ├── pages/            # Home, Trainings
 ├── routes/           # Route definitions
 ├── services/         # API/email services

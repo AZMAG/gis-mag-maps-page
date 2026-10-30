@@ -1,4 +1,4 @@
-import DocConfig from "../../config/docConfig"
+import DocConfig from "../../config/doc-config"
 
 export default function RaDigestButton() {
   const active = true

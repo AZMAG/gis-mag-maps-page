@@ -1,4 +1,4 @@
-import DocConfig from "../../config/docConfig"
+import DocConfig from "../../config/doc-config"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import LegalLink from "../../components/modals/legal/LegalLink"

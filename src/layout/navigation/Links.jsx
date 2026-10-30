@@ -30,6 +30,6 @@ export default function NavLinks() {
     //   link: "https://azmag.gov/About-Us/Divisions/Regional-Analytics-Division/",
     //   internal: false,
     // },
-  ]
-  return navLinks
+  ];
+  return navLinks;
 }

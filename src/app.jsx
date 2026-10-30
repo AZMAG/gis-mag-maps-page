@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { BrowserRouter } from "react-router";
 import ReactGA from "react-ga4";
-import DocConfig from "./config/docConfig";
+import DocConfig from "./config/doc-config";
 import AppRoutes from "./routes/Routes";
 import ScrollToTop from "./components/scroll-to-top/ScrollToTop";
 import { DataProvider } from "./stores/DataContext";
