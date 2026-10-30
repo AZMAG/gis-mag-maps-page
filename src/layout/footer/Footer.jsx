@@ -9,7 +9,7 @@ import SocialMedia from "./SocialMedia"
 export default function Footer() {
   const social = SocialMedia()
   return (
-    <footer id="footer" className="bg-slate-200 text-cyan-800">
+    <footer id="footer" className="shrink-0 bg-slate-200 text-cyan-800">
       <div className="flex flex-col flex-wrap container mx-auto pt-9">
         <section className="grid grid-cols-1 justify-items-center gap-8 md:gap-10 lg:gap-16 md:grid-cols-3 mx-8">
           <div id="contact-info" className="text-left text-sm">

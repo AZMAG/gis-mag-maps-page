@@ -1,4 +1,3 @@
-import React from "react"
 import { useEffect, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons"
@@ -7,18 +6,17 @@ const ScrollToTopButton = ({ containerRef }) => {
   const [showScroll, setShowScroll] = useState(false)
 
   useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
     const checkScrollTop = () => {
-      if (!showScroll && containerRef.current.scrollTop > 300) {
-        setShowScroll(true)
-      } else if (showScroll && containerRef.current.scrollTop <= 300) {
-        setShowScroll(false)
-      }
+      setShowScroll(container.scrollTop > 300)
     }
 
-    if (containerRef.current) {
-      containerRef.current.addEventListener("scroll", checkScrollTop)
-    }
-  }, [containerRef, showScroll, setShowScroll])
+    checkScrollTop()
+    container.addEventListener("scroll", checkScrollTop)
+    return () => container.removeEventListener("scroll", checkScrollTop)
+  }, [containerRef])
 
   const scrollTop = () => {
     containerRef.current.scrollTo({ top: 0, behavior: "smooth" })

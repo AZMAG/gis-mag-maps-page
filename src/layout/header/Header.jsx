@@ -12,7 +12,7 @@ export default function Header() {
   };
 
   return (
-    <header className="text-magBlue sticky top-0 z-10 flex h-24 w-full bg-slate-50">
+    <header className="text-magBlue sticky top-0 z-10 flex h-24 w-full shrink-0 bg-slate-50">
       <section className="container mx-auto flex items-center justify-between p-4">
         <div className="flex flex-row items-center gap-4">
           <a
