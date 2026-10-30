@@ -1,16 +1,15 @@
-import HeatReliefLogo from "../../assets/images/card-icons/icon-heat-relief-network.png";
 import BikeMapLogo from "../../assets/images/bike-icon_main.png";
 import BikePhoto from "../../assets/images/bike-hero-image.jpg";
 
 export default function BikeMapHero() {
   return (
-    <section className="from bg-gradient-to-r from-cyan-800 to-slate-200">
-      <div className="container mx-auto flex max-w-screen-xl flex-wrap justify-center gap-y-4 px-4 py-4 md:justify-between md:gap-0 lg:py-8">
+    <section className="from bg-linear-to-r from-magBlue to-slate-200">
+      <div className="container mx-auto flex max-w-7xl flex-wrap justify-center gap-y-4 px-4 py-4 md:justify-between md:gap-0 lg:py-8 text-white">
         <div className="order-2 px-4 md:order-1 md:w-3/5 lg:px-0">
-          <div className="mb-4 w-40 bg-fuchsia-900 px-4 py-2 font-bold text-fuchsia-100">
+          <div className="mb-4 w-40 bg-magGreen px-4 py-2 font-bold">
             In The Spotlight
           </div>
-          <h1 className="mb-4 flex max-w-2xl items-center space-x-2 text-2xl font-extrabold leading-none tracking-tight text-slate-800 md:text-3xl xl:text-4xl">
+          <h1 className="mb-4 flex max-w-2xl items-center space-x-2 text-2xl font-extrabold leading-none tracking-tight md:text-3xl xl:text-4xl">
             <img
               src={BikeMapLogo}
               className="h-8 md:h-10 lg:h-12"
@@ -18,14 +17,14 @@ export default function BikeMapHero() {
             />
             <span>MAG Bikeways Bikemap</span>
           </h1>
-          <p className="mb-2 max-w-2xl text-base text-slate-100 md:mb-6 md:text-lg lg:mb-8 lg:text-xl">
+          <p className="mb-2 max-w-2xl text-base md:mb-6 md:text-lg lg:mb-8 lg:text-xl">
             The MAG Bikeways map shows existing, locally-designated bicycle
             facilities, including bike lanes, shared-use paths, and other
             cycling infrastructure, as identified by local jurisdictions. It
             serves as a resource for cyclists to plan routes and for planners to
             enhance regional connectivity.
           </p>
-          <div className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 mr-3 inline-flex items-center justify-center rounded-lg px-5 py-3 text-center font-medium text-slate-100">
+          <div className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 mr-3 inline-flex items-center justify-center rounded-lg px-5 py-3 text-center font-medium">
             Get started
             <svg
               className="-mr-1 ml-2 h-5 w-5"
@@ -44,7 +43,7 @@ export default function BikeMapHero() {
             href="https://geo.azmag.gov/maps/bikemap/"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-lg border border-cyan-900 bg-cyan-800 px-5 py-2 text-center text-base font-medium text-slate-100 hover:bg-cyan-800/75"
+            className="inline-flex items-center justify-center rounded-lg bg-magBlue px-5 py-2 text-center text-base font-medium  hover:bg-magGreen"
           >
             Launch Bikemap
           </a>

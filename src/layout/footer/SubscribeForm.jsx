@@ -43,7 +43,7 @@ export default function SubscribeForm() {
         <button
           type="submit"
           name="commit"
-          className="bg-magBlue px-5 py-2.5 text-sm font-medium text-white hover:bg-magBlue/75 cursor-pointer">
+          className="bg-magBlue px-5 py-2.5 text-sm font-medium text-white hover:bg-magGreen cursor-pointer">
           Subscribe
         </button>
       </form>

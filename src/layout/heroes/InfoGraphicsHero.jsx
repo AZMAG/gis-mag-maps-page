@@ -4,24 +4,24 @@ import InfographicButton from "../../components/buttons/InfographicsButton"
 
 export default function InfoGraphicsHero() {
   return (
-    <section className="from bg-linear-to-l from-cyan-800 to-slate-200">
-      <div className="container mx-auto flex flex-row flex-wrap justify-around px-4 py-4 lg:py-8">
+    <section className="from bg-linear-to-l from-magBlue to-slate-200">
+      <div className="container mx-auto flex flex-row flex-wrap justify-around px-4 py-4 lg:py-8 text-white">
         <div className="flex items-center justify-center px-8">
           <FontAwesomeIcon
             icon={faChartColumn}
-            className="text-7xl text-cyan-800 lg:text-8xl xl:text-9xl"
+            className="text-7xl text-magBlue lg:text-8xl xl:text-9xl"
           />
         </div>
         <div className="flex flex-col justify-center p-4">
-          <h1 className="mb-4 max-w-2xl text-2xl font-extrabold leading-none tracking-tight text-slate-800 md:text-3xl xl:text-4xl">
+          <h1 className="mb-4 max-w-2xl text-2xl font-extrabold leading-none tracking-tight md:text-3xl xl:text-4xl">
             Infographics, Maps, and Reports
           </h1>
-          <p className="mb-2 max-w-2xl font-light text-slate-100 md:text-lg lg:mb-8 lg:text-xl">
+          <p className="mb-2 max-w-2xl text-base md:mb-6 md:text-lg lg:mb-8 lg:text-xl">
             Pre-made infographics, maps, and reports on topics including commute patterns,
             homelessness, foreign direct investment, population estimates, and distressed housing.
           </p>
           <div className="">
-            <div className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 mr-3 inline-flex items-center justify-center rounded-lg px-5 py-3 text-center text-base font-medium text-slate-100">
+            <div className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 mr-3 inline-flex items-center justify-center rounded-lg px-5 py-3 text-center text-base font-medium">
               Find out more
               <svg
                 className="-mr-1 ml-2 h-5 w-5"
