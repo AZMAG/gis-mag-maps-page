@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { replaceInFile } from "replace-in-file";
-import pkg from "./package.json" with { type: "json" };
+import pkg from "../package.json" with { type: "json" };
 
 const { version, date, copyright } = pkg;
 

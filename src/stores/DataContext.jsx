@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { createDataStore } from "./createDataStore";
+import { createDataStore } from "./create-data-store";
 import { useLocalObservable } from "mobx-react-lite";
 
 const DataContext = createContext(null);

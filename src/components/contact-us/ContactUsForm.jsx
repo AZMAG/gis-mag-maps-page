@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDataStore } from "../../stores/DataContext"
-import contactUsEmail from "../../services/contactUsEmail";
+import contactUsEmail from "../../services/contact-us-email";
 import MAGLogo from "../../assets/logos/mag-logo-blue-horizontal.webp"
 
 function ContactUsForm({ onSuccess }) {

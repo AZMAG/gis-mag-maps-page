@@ -54,8 +54,8 @@ export default [
                 {
                     // component files export a PascalCase component, matching the filename
                     "**/*.jsx": "PASCAL_CASE",
-                    // non-component files (utils, config, hooks, constants) use camelCase
-                    "**/*.js": "CAMEL_CASE",
+                    // non-component files (utils, config, hooks, constants) use kebab-case
+                    "**/*.js": "KEBAB_CASE",
                 },
                 {
                     ignoreMiddleExtensions: true,
