@@ -1,6 +1,6 @@
 # gis-mag-maps-page
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmaps.azmag.gov%2F&label=website&style=flat-square)](https://maps.azmag.gov/)
+[![Website](https://img.shields.io/website?url=https://maps.azmag.gov/%2F&label=website&style=flat-square)](https://maps.azmag.gov/)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/AZMAG/gis-mag-maps-page?&logo=github&style=flat-square)](https://github.com/AZMAG/gis-mag-maps-page/releases)
 ![GitHub Release Date](https://img.shields.io/github/release-date/AZMAG/gis-mag-maps-page?&logo=github&style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/AZMAG/gis-mag-maps-page?&logo=github&style=flat-square)
