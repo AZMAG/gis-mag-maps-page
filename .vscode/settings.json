@@ -1,10 +1,14 @@
 {
     "cSpell.words": [
-        "arcgis",
-        "Infographics",
-        "Maricopa",
-        "Pinal",
-        "Vite",
-        "Wolfley"
-    ]
+      "arcgis",
+      "Infographics",
+      "Maricopa",
+      "Pinal",
+      "Vite",
+      "vwolfley",
+      "Wolfley"
+    ],
+    "files.associations": {
+        "CODEOWNERS": "plaintext"
+    }
 }

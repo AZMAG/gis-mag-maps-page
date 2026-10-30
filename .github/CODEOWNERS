@@ -1,0 +1,18 @@
+
+# Code Owners
+
+# This document records the repository's code ownership policy and the GitHub handles to use when assigning review responsibility.
+
+# [codeowners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners#example-of-a-codeowners-file)
+
+# Owners should be GitHub users or teams with write access to this repository. Use their exact GitHub handles, such as `@username` or `@organization/team-name`, and confirm the assignment with the repository maintainers.
+
+# Add a verified GitHub user or team with write access.
+# Replace the example pattern below with the actual owner.
+# * @organization/team-name
+# * @username1 @username2
+
+# These owners will be the default owners for everything in the repo.
+
+*   @vwolfley
+

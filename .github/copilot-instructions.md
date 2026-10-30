@@ -1,108 +1,46 @@
-# map-projections — Copilot Cloud Agent Instructions
-
-Trust these instructions first. Only search the codebase if information here is missing or
-proves incorrect for the change you are making.
+# MAG Maps Page — Copilot Instructions
 
 ## Repository summary
 
-MAG (Maricopa Association of Governments) Projections Map Viewer — a single-page React app that
-displays socioeconomic long-range projections (population, jobs, etc.) for Maricopa and Pinal
-counties, Arizona, using the ArcGIS JavaScript API (`@arcgis/core` v5). State is managed with
-MobX (`mobx` / `mobx-react-lite`). It is a small (~100 source files), client-only web app; there
-is no backend/server code in this repo.
+This repository contains the MAG mapping home page, a client-side React application that links users to MAG's interactive mapping and analysis sites. This project does not contain ArcGIS map layers or a backend.
 
-- Language/runtime: JavaScript (JSX), no TypeScript compilation (only `@types/*` for editor
-  intellisense).
-- Build tool: Vite 8 (`vite.config.js`), plugins: `@vitejs/plugin-react`, `@tailwindcss/vite`.
-- Styling: Tailwind CSS v4 via the `@tailwindcss/vite` plugin (`src/index.css`). There is no
-  PostCSS config — Tailwind v4 handles vendor prefixing internally.
-- Charting: Chart.js via `react-chartjs-2`.
-- Package manager: npm (there is a `package-lock.json`; always use `npm`, not yarn/pnpm).
-- Node: verified working with Node v24.x / npm 11.x. No `.nvmrc` or `engines` field is present.
+- JavaScript with JSX; the package is ESM (`"type": "module"`).
+- React 19, Vite 8, React Router, and MobX (`mobx` / `mobx-react-lite`).
+- Tailwind CSS v4 through `@tailwindcss/vite`; global styles and theme tokens are in `src/index.css`.
+- npm is the package manager. The declared runtime floor is Node 24 and npm 11.
 
-## Environment setup (required before build/dev/lint)
+## Setup and environment
 
-1. Always run `npm install` first if `node_modules` is not already present.
-2. Environment variables are read via Vite (`import.meta.env`) from a `.env` file. A template
-   exists at `.env.example`. For `npm run dev`/`npm run build` to behave correctly with routing
-   base paths and Esri/Google Analytics keys, copy `.env.example` to `.env` and fill in real
-   values if you need the app to actually run in a browser. This is **not** required for `vite
-   build` or `eslint` to succeed — the build completes with placeholder/missing env vars, just
-   with broken map/analytics functionality at runtime.
+- Install dependencies with `npm install` if `node_modules` is missing.
+- Vite reads local variables from `.env`; copy `.env.example` to `.env` when needed.
+- The app currently reads `VITE_GA_MEASUREMENT_ID` and the environment-specific router basename (`VITE_APP_BASENAME_DEV`, `VITE_APP_BASENAME_TEST`, or `VITE_APP_BASENAME_PROD`). Do not hardcode these values in source or commit `.env`.
+- `.env.example` also lists `VITE_ESRI_API_KEY`, but the current application source does not reference it.
 
-## Build and dev commands (validated)
+## Commands
 
-- `npm run dev` — starts the Vite dev server on `http://localhost:3000` (opens browser
-  automatically via `open: true` in `vite.config.js`; this will fail/hang in a headless cloud
-  agent sandbox — do not rely on it there, prefer `vite build` to validate compilation instead).
-- `npm run build` — runs `npm run replace && vite build --mode production && explorer dist`.
-  **The trailing `explorer dist` step opens a Windows File Explorer window and only exists for
-  local Windows use.** It is not cross-platform: on Linux/cloud-agent environments `explorer`
-  does not exist and the command will fail even though the actual Vite build succeeded. When
-  validating a build in this environment, run `npm run replace && npx vite build --mode
-  production` directly instead of `npm run build`, or ignore a failure that occurs only on the
-  `explorer dist` step after `✓ built in Xs` has already printed.
-- `npm run build:test` — same as `build` but `--mode test`; has the same `explorer dist` caveat.
-- `npm run replace` — runs `node replaceScripts.js`, a version/date/copyright string-substitution
-  utility (uses `package.json` `version`/`date`/`copyright` fields) that rewrites `README.md`,
-  `LICENSE`, `public/LICENSE`, `public/humans.txt`, `index.html`, and
-  `src/config/docConfig.jsx`. It runs automatically as part of `build`/`build:test`; you normally
-  do not need to run it standalone.
-- There is **no test script and no test framework** configured in this repo (no `test` entry in
-  `package.json`, no Jest/Vitest config). Do not try to invent or run tests; validate changes via `npm run build` and `vite build`.
+- `npm run dev` starts Vite at `http://localhost:3000` and opens a browser.
+- `npm run lint` runs ESLint.
+- `npm run check-casing` checks the repository's file and folder naming conventions.
+- `npm run format` runs Prettier across the repository; avoid it for a narrow change unless formatting the whole project is intended.
+- `npm run build` runs `npm run replace`, builds in production mode, then runs Windows `explorer dist`. On non-Windows systems or in CI, use `npm run replace && npx vite build --mode production` to build without the Explorer step.
+- `npm run build:test` builds with Vite's `test` mode and has the same Explorer caveat. `npm run preview` serves the built output locally.
+- There is no configured test script or test framework. Use lint, casing checks, and a production build as appropriate to the change.
+- `npm run replace` updates version/date/copyright metadata derived from `package.json` in `README.md`, license files, `public/humans.txt`, `index.html`, and `src/config/docConfig.js`. Build scripts run it automatically; do not hand-edit those generated metadata values.
 
 ## Project layout
 
-- [index.html](index.html) — Vite entry HTML (contains version/date meta tags rewritten by
-  `replaceScripts.js`).
-- [src/main.jsx](src/main.jsx) — React root entry point, mounts `App` from
-  [src/app.jsx](src/app.jsx).
-- [src/app.jsx](src/app.jsx) — top-level app component/layout composition.
-- [src/pages/MainPage.jsx](src/pages/MainPage.jsx) — main page assembling the map + side panel.
-- [src/stores/](src/stores) — MobX store: `createDataStore.js` (central app/map state) and
-  `DataContext.jsx` (React context provider for the store). Most cross-cutting state (selected
-  area, selected data/year, layers) lives here.
-- [src/components/Map/](src/components/Map) — `mainMap.jsx` and `map_xxx.jsx` set up the ArcGIS
-  `MapView`.
-- [src/components/MapLayers/](src/components/MapLayers) — one file per ArcGIS layer type
-  (county, jurisdiction, heatmap, MAG region, MPA boundaries, RAZ, streets), plus
-  `layersConfig.jsx`, `getRenderer.js`/`getHeatmapRenderer.js`, and
-  `staticClassBreaks.js` (class-break definitions keyed by `raz`/`mpa`/`juris`). See
-  `/memories/repo/map-layers.md`-style notes: heatmap layers must be swapped (new `FeatureLayer`
-  created and replaced in the map), not mutated via `.url`, because mutating `.url` on an
-  already-loaded `FeatureLayer` does not reload its data.
-- [src/components/](src/components) also holds top-level UI: `AreaSelector.jsx`,
-  `DataSelector.jsx`, `DataTable.jsx`, `LeftPanel.jsx`, `LegendPanel.jsx`, `LineChart.jsx`,
-  `Popup.jsx`, `Switch.jsx`, `TransparencySlider.jsx`, `YearSelector.jsx`, plus subfolders for
-  `ContactUs/` and `Modals/` (about/error/legal/notes/privacy/success/terms — each a
-  Button/Modal/Text or Link/Modal/Text trio).
-- [src/layout/](src/layout) — `Footer/`, `Header/`, `Navigation/` (desktop + mobile navbar),
-  `Sidepanel/`.
-- [src/config/docConfig.jsx](src/config/docConfig.jsx) — version/date/copyright metadata,
-  auto-updated by `replaceScripts.js`; do not hand-edit the generated fields, edit
-  `package.json`'s `version`/`date`/`copyright` instead if the release metadata truly needs to
-  change.
-- [src/services/contactUsEmail.jsx](src/services/contactUsEmail.jsx) — email-sending service
-  used by the Contact Us form (uses `axios`).
-- Config files: [vite.config.js](vite.config.js) (dev server on port 3000, base `./`),
-  [eslint.config.js](eslint.config.js) (flat ESLint config — see lint caveat above),
-  `.editorconfig`.
-- [replaceScripts.js](replaceScripts.js) — see "build" notes above.
-- `public/` — static assets served as-is (favicons, `manifest.json`, `robots.txt`,
-  `humans.txt`, `LICENSE`).
-- `dist/` — build output directory (git-ignored aside from being present locally); do not hand
-  edit.
+- `src/main.jsx` mounts the application from `src/app.jsx`.
+- `src/app.jsx` configures the data provider, router basename, analytics, and scroll-to-top behavior.
+- `src/routes/Routes.jsx` defines routes; `src/pages/` contains page components.
+- `src/layout/` contains the header, footer, cards, heroes, and page sections.
+- `src/components/` contains buttons, contact-us UI, modals, and scroll-to-top behavior.
+- `src/stores/` contains the MobX store and React context provider.
+- `src/config/` contains document metadata and content configuration; `src/services/` contains service integrations such as contact email.
+- `src/assets/` contains images and logos; `public/` contains static public assets.
 
 ## Conventions and gotchas
 
-- This is a `"type": "module"` package; use ESM `import`/`export` syntax everywhere in
-  `.js`/`.jsx` files (no CommonJS `require`).
-- Prettier is configured with `prettier-plugin-tailwindcss` (see `package.json` `"prettier"`
-  field) — if formatting, keep Tailwind class ordering behavior in mind, though there is no
-  separate `npm run format` script; Prettier is applied via editor/IDE integration only.
-- No `.env` values should be hardcoded into source; always reference via `import.meta.env.VITE_*`.
-- Keep FeatureLayer `outFields`/`popupTemplate.outFields` explicit for planning layers rather
-  than using wildcard `"*"`, to avoid oversized payloads.
-- When changing anything under `src/components/MapLayers/`, be aware `staticClassBreaks.js` is
-  keyed by `raz`/`mpa`/`juris`, and the UI's `selectedArea` value `county` is treated as an alias
-  of `raz` for class-break lookups.
+- Use ESM `import`/`export` syntax in `.js` and `.jsx` files.
+- Follow the configured naming checks: kebab-case folders, PascalCase `.jsx` files, and camelCase `.js` files. `src/main.jsx` and `src/app.jsx` are intentional lowercase exceptions.
+- Keep Tailwind classes consistent with the project's Prettier configuration, including its Tailwind class sorting plugin.
+- The app is a static front end. Do not assume a map API, ArcGIS SDK, or server-side component exists; verify current source usage before adding integrations or documenting them.
