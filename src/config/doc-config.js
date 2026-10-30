@@ -1,7 +1,7 @@
 /** @type {DocConfig} */
 const docConfig = {
     app: {
-        version: "v6.7.1",
+        version: "v6.8.0",
         releaseDate: "2026-10-30",
         created: "2014-10-21",
         copyright: "2026",
