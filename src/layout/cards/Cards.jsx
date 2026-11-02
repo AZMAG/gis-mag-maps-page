@@ -1,12 +1,12 @@
 import React from "react"
-import CardInfo from "./CardInfo"
+import CardInfo from "./card-info"
 
 export default function Cards() {
   const data = CardInfo()
   const statewide =
-    "m-0.5 inline-flex items-center rounded-md bg-fuchsia-900 px-2 py-1 text-xs font-medium text-slate-100 ring-1 ring-inset ring-gray-500/10"
+    "m-0.5 inline-flex items-center rounded-md bg-magCyan px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-500/10"
   const regional =
-    "m-0.5 inline-flex items-center rounded-md bg-cyan-800 px-2 py-1 text-xs font-medium text-slate-100 ring-1 ring-inset ring-gray-500/10"
+    "m-0.5 inline-flex items-center rounded-md bg-magBlue px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-500/10"
 
   return (
     <section className="container mx-auto my-8 grid max-w-7xl cursor-pointer grid-cols-2 gap-6 px-12 md:grid-cols-3 md:px-6 lg:grid-cols-5 lg:px-4">
@@ -14,11 +14,11 @@ export default function Cards() {
         i.active ? (
           <div
             key={index}
-            className="group flex transform flex-col rounded-lg border border-slate-200 bg-white shadow-md transition duration-150 hover:scale-105 hover:shadow-2xl">
+            className="group flex transform flex-col rounded-lg border border-magLtGray bg-white shadow-md transition duration-150 hover:scale-105 hover:shadow-2xl">
             <a href={i.link} target="_blank" rel="noreferrer">
               <div
                 role="tooltip"
-                className="pointer-events-none absolute inset-x-0 z-10 rounded-lg bg-cyan-800/80 px-3 py-3 text-center text-sm text-slate-200 opacity-0 transition duration-150 ease-in-out group-hover:opacity-100">
+                className="pointer-events-none absolute inset-x-0 z-10 rounded-lg bg-magBlue/80 px-3 py-3 text-center text-sm text-white opacity-0 transition duration-150 ease-in-out group-hover:opacity-100">
                 {i.text}
               </div>
 
@@ -31,7 +31,7 @@ export default function Cards() {
                 <img className="h-14 rounded-t-lg md:h-16 lg:h-20" src={i.icon} alt={i.viewer} />
               </div>
               <div className="p-2">
-                <p className="text-center text-sm font-bold tracking-tight text-cyan-800 lg:text-lg">
+                <p className="text-center text-sm font-bold tracking-tight text-magBlue lg:text-lg">
                   {i.viewer}
                 </p>
               </div>

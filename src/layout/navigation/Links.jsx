@@ -1,3 +1,5 @@
+import docConfig from "../../config/doc-config";
+
 export default function NavLinks() {
   const navLinks = [
     {
@@ -6,30 +8,18 @@ export default function NavLinks() {
       link: "/",
       internal: true,
     },
-    // {
-    //   id: "trainings",
-    //   name: "Trainings",
-    //   link: "/trainings",
-    //   internal: true,
-    // },
     {
       id: "mag-data",
       name: "MAG Data",
-      link: "https://azmag.gov/Programs/Maps-and-Data/",
+      link: docConfig.links.MapsAndDataLink,
       internal: false,
     },
     {
       id: "gis-portal",
       name: "Open GIS Portal",
-      link: "https://geodata-azmag.opendata.arcgis.com/",
+      link: docConfig.links.GeoDataOpenDataLink,
       internal: false,
-    },
-    // {
-    //   id: "rad-info",
-    //   name: "RAD Info",
-    //   link: "https://azmag.gov/About-Us/Divisions/Regional-Analytics-Division/",
-    //   internal: false,
-    // },
+    }
   ];
   return navLinks;
 }

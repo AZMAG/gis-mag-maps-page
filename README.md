@@ -17,7 +17,7 @@ This JavaScript web-page was developed by MAG staff for MAG member agencies and 
 
 `planning` `regional` `Maricopa County` `Pinal County` `State` `Arizona` `MAG` `MPO` `COG` `maps` `GIS` `ESRI` `#MAGmaps`
 
-## Version | 6.7.1
+## Version | 6.8.0
 
 - **Updated** | 2026-10-30
 - **Created** | 2014-10-21
@@ -117,7 +117,7 @@ In the project directory, you can run:
 
 - Replaces the version number, copyright, and build date from `package.json` in the rest of the
   documents (`README.md`, `LICENSE`, `public/LICENSE`, `public/humans.txt`, `index.html`,
-  `src/config/docConfig.js`).
+  `src/config/doc-config.js`).
 - Runs automatically as part of `build` and `build:test`.
 
 ## Project Structure

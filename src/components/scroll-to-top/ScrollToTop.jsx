@@ -1,4 +1,3 @@
-import React from "react"
 import { useEffect, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons"
@@ -7,18 +6,17 @@ const ScrollToTopButton = ({ containerRef }) => {
   const [showScroll, setShowScroll] = useState(false)
 
   useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
     const checkScrollTop = () => {
-      if (!showScroll && containerRef.current.scrollTop > 300) {
-        setShowScroll(true)
-      } else if (showScroll && containerRef.current.scrollTop <= 300) {
-        setShowScroll(false)
-      }
+      setShowScroll(container.scrollTop > 300)
     }
 
-    if (containerRef.current) {
-      containerRef.current.addEventListener("scroll", checkScrollTop)
-    }
-  }, [containerRef, showScroll, setShowScroll])
+    checkScrollTop()
+    container.addEventListener("scroll", checkScrollTop)
+    return () => container.removeEventListener("scroll", checkScrollTop)
+  }, [containerRef])
 
   const scrollTop = () => {
     containerRef.current.scrollTo({ top: 0, behavior: "smooth" })
@@ -27,7 +25,7 @@ const ScrollToTopButton = ({ containerRef }) => {
   return (
     <div className="z-30 flex flex-row justify-end">
       <button
-        className="fixed bottom-0 right-8 h-12 w-14 cursor-pointer items-center justify-center rounded-t-xl border-none bg-slate-300 px-4 py-2 outline-none"
+        className="fixed bottom-0 right-8 h-12 w-14 cursor-pointer items-center justify-center rounded-t-xl border-none bg-magBlue px-4 py-2 outline-none"
         type="button"
         title="Scroll to top"
         aria-label="Scroll to top"
@@ -36,7 +34,7 @@ const ScrollToTopButton = ({ containerRef }) => {
         <FontAwesomeIcon
           icon={faArrowCircleUp}
           size="2x"
-          className="text-cyan-800/75 hover:text-cyan-800"
+          className="text-magGreen hover:text-magGreen/55"
         />
       </button>
     </div>

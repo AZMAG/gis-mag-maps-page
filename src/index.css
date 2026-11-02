@@ -61,9 +61,14 @@ body {
     font-family: var(--paragraph-font);
     background-color: #fff;
     color: #222;
-    overflow-y: scroll;
+    overflow: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
+
+#root {
+    height: 100%;
+    overflow: hidden;
 }
 
 /* Hide scrollbar for Chromium-based browsers */

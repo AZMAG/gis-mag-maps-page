@@ -37,7 +37,7 @@ export default function App() {
   return (
     <DataProvider>
       <div
-        className="flex h-screen w-screen flex-col overflow-x-hidden scroll-smooth"
+        className="relative flex h-dvh w-full flex-col overflow-x-hidden overflow-y-auto scroll-smooth"
         ref={containerRef}
       >
         <BrowserRouter basename={base}>

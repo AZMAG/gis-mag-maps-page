@@ -91,7 +91,7 @@ const targets = [
     },
     {
         label: "docConfig",
-        files: "./src/config/docConfig.js",
+        files: "./src/config/doc-config.js",
         rules: [
             {
                 name: "version",
