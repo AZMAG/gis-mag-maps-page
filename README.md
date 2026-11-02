@@ -19,7 +19,7 @@ This JavaScript web-page was developed by MAG staff for MAG member agencies and 
 
 ## Version | 6.8.0
 
-- **Updated** | 2026-10-30
+- **Updated** | 2026-11-02
 - **Created** | 2014-10-21
 
 Releases will be numbered with the following format: **`<major>.<minor>.<patch>`**
